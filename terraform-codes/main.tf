@@ -7,13 +7,6 @@ data "aws_subnet" "subnet" {
   tags = { "Name" : var.subnet_name[count.index] }
 }
 
-#resource "aws_subnet" "subnet" {
-#  count             = length(var.tag_name)
-#  vpc_id            = data.aws_vpc.vpc_id.id
-#  cidr_block        = var.cidr_block
-#  availability_zone = var.availability_zone[count.index]
-#}
-
 resource "aws_network_interface" "network_interface" {
   count           = length(var.tag_name)
   subnet_id       = data.aws_subnet.subnet[count.index].id
