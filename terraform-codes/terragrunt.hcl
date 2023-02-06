@@ -9,6 +9,8 @@ inputs = {
   ami_id = "ami-0486e3c2fecdf9d6f"
   instance_type = "t2.large"
   tag_name = ["itops-poc-dc1-2019", "itops-poc-dc2-2019"]
+  administratorsgroup = "ess-admins"
+  ou = "OU=Dev,OU=Servers,OU=TEST,OU=FFM,OU=External,OU=CMS,DC=awscloud,DC=cms,DC=local"
   ec2_key_name = "ai-key"
   instance_count = 2
   # vpc tag name

@@ -13,3 +13,7 @@ output "instance_id" {
 output "instance_az" {
   value = aws_instance.instance[*].availability_zone
 }
+
+output "tags" {
+  value = aws_instance.instance[*].tags
+}

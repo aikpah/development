@@ -22,6 +22,18 @@ variable "tag_name" {
   default = []
 }
 
+variable "administratorsgroup" {
+  description = "AD Gropu"
+  type = string
+  default = ""
+}
+
+variable "ou" {
+  description = "Organizational Unit"
+  type = string
+  default = ""
+}
+
 variable "cidr_block" {
   description = "The subnet the instance will be in"
   type = list(any)
