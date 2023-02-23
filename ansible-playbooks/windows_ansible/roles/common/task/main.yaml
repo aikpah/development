@@ -1,0 +1,5 @@
+---
+import_tasks:
+- set_hostname.yaml
+- update_host.yaml
+...

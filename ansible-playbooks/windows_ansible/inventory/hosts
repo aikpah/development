@@ -1,0 +1,14 @@
+---
+all:
+  hosts:
+    itops-poc-dc1-2019:
+      ansible_host: 10.147.243.24
+      ansible_user: administrator
+      ansible_connection: winrm
+      ansible_winrm_transport: basic
+      ansible_winrm_server_cert_validation: ignore
+
+    itops-poc-dc2-2019:
+      ansible_host: 10.147.243.54
+      ansible_user: administrator
+...

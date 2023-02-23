@@ -1,0 +1,10 @@
+---
+- name: Change the hostname to sample-hostname
+  ansible.windows.win_hostname:
+    name: {{ ansible_host }}
+  register: res
+
+- name: Reboot
+  ansible.windows.win_reboot:
+  when: res.reboot_required
+...

@@ -1,0 +1,17 @@
+
+---
+- name: Install Active Directory Domain Services
+  ansible.windows.win_command: Install-WindowsFeature –Name AD-Domain-Services –IncludeManagementTools
+  register: ad_out
+- debug: msg="{{ ad_out }}"
+
+- name: Install Domain Name System Services
+  ansible.windows.win_command: Install-WindowsFeature DNS
+  register: dns_out
+
+- debug: msg="{{ dns_out }}"
+- name: Install and Create Forest
+  ansible.windows.win_command:
+   - Install-ADDSForest -DomainName {{ DomainName }} -SafeModeAdministratorPassword {{ AdministratorPassword }}
+
+...
