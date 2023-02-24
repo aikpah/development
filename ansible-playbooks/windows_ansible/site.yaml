@@ -1,9 +1,9 @@
 ---
-- name: "Set Hostname and Patch"
-  hosts: all
-  roles:
-    - common
-  tags: patch
+# - name: "Set Hostname and Patch"
+#  hosts: all
+#  roles:
+#    - common
+#  tags: patch
 - name: "Install DNS and Setup Domin Controller"
   hosts: all
   roles:
