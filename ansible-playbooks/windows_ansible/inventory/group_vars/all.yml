@@ -1,3 +1,2 @@
 ---
 DomainName: cms.test.local
-AdministratorPassword: {{ Password }}
