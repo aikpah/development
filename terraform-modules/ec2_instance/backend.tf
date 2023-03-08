@@ -1,5 +1,3 @@
-
-
 terraform {
   backend "s3" {
     bucket         = "cms-cloud-dc-upgrade-us-east-1"
